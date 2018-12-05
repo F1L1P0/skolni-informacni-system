@@ -1,0 +1,17 @@
+body, html{
+	background-image: linear-gradient(#00fff666,white);	
+	background-size: cover;
+	height: 100%;
+}
+
+tbody{
+	text-align: center;
+}	
+
+.navbar {
+	background-color: #4267b2e6;
+}
+
+.container{
+	padding-top: 20px;
+}
