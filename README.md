@@ -1,0 +1,1 @@
+# skolni-informacni-system
