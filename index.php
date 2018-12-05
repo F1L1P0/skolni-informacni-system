@@ -5,7 +5,7 @@
 ?> 
 	
 	
-			
+	// koment		
 		
 <?php
 	require 'footer.php';
