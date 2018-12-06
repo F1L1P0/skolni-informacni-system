@@ -1,12 +1,12 @@
 <?php
 	$header_title = "SBTI";
-	require "header.php";	
+	require "header.php";
 
+	
 ?> 
+
 	
-	
-	// koment		
-		
+
 <?php
 	require 'footer.php';
 ?> 

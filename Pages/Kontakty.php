@@ -6,6 +6,7 @@
 
 
 ?> 
+
 <div class="jumbotron">
 	<span>Kontakty</span>
 </div>
