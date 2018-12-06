@@ -18,18 +18,24 @@ tbody{
 	padding-top: 20px;
 }
 
-.nadpis{
+.jumbotron{
+	background-color: transparent;
 	text-align: center;
-	padding: 10px;
-	color: black; 
-	font-family: 'Raleway',sans-serif; 
-	font-size: 30px;
-	font-weight: 800;
-	line-height: 36px;
-	margin: 0 10 24px;
+	padding: 15px 0px; 
+	margin: 10px 100px;
+}
+
+.jumbotron span{
+	font-size: 30px;	
+	background-color: white;
+	border-radius: 5px;
+	padding: 15px 50px;
 }
 
 .pozice_kontakty{
 	text-align: left;
 }
 
+table{
+	background-image: linear-gradient(to right, #f64f594d, #15c1e933);
+}
