@@ -6,7 +6,7 @@
 
 
 ?> 
-	<h1 class="text-center">Aktuality</h1>
+	<h1 class="nadpis">Aktuality</h1>
 
 	
 	

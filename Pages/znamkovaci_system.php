@@ -6,7 +6,7 @@
 
 
 ?> 
-	<h1 class="text-center">Známkovací system</h1>
+	<h1 class="nadpis">Známkovací system</h1>
 
 	
 	

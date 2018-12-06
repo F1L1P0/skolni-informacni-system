@@ -6,7 +6,7 @@
 
 
 ?> 
-	<h1 class="text-center">FAQ</h1>
+	<h1 class="nadpis">FAQ</h1>
 
 	
 	

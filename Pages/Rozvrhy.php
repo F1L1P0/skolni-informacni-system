@@ -6,7 +6,7 @@
 
 
 ?> 
-	<h1 class="text-center">Rozvrhy</h1>
+	<h1 class="nadpis">Rozvrhy</h1>
 
 	
 	
