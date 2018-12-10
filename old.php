@@ -8,7 +8,7 @@
 		$pohlavi = $_GET["pohlavi"];
    		
 
-		$databaze->query("INSERT INTO users (name, pohlavi) VALUES ('$name', '$pohlavi')"); // vykoná SQL kód
+		$databaze->query("INSERT INTO radeks (name, pohlavi) VALUES ('$name', '$pohlavi')"); // vykoná SQL kód
 		redirect("index.php");
 
 	}
@@ -18,7 +18,7 @@
 			
 			<form id="form" action="index.php" method="GET">
 				<input type="text" name="name" placeholder="Napiš svoje jméno">
-				<i class="fas fa-users"></i>
+				<i class="fas fa-radeks"></i>
 			  	<select name="pohlavi">
 				    <option value="muž">Muž</option>
 				    <option value="žena">Žena</option>
@@ -37,19 +37,18 @@
 
 				<tbody>
 					<?php 
-						$sql = "SELECT * FROM users";
-						$result = $databaze->query($sql);
+						$radky = $databaze->query("SELECT * FROM users");
 						
-						$result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+						$radky = mysqli_fetch_all($radky, MYSQLI_ASSOC);
 
-						foreach ($result as $user)
+						foreach ($radky as $radek)
 						{ ?>
 							
 							<tr>
-								<td><?= $user["id"] ?></td>
-								<td><?= $user["name"] ?></td>
-								<td><?= $user["pohlavi"] ?></td>
-								<td> <a href="delete.php?id=<?= $user["id"] ?>">Smazat</a> </td>
+								<td><?= $radek["id"] ?></td>
+								<td><?= $radek["name"] ?></td>
+								<td><?= $radek["pohlavi"] ?></td>
+								<td> <a href="delete.php?id=<?= $radek["id"] ?>">Smazat</a> </td>
 							</tr>
 
 						  <?php	

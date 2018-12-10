@@ -68,23 +68,53 @@
       
     </ul>
 
-    <form class="form-inline">
-			<div class="input-group mx-1 my-2">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
-			  </div>
-			  <input type="text" class="form-control" placeholder="Jméno">
-			</div>
+    <?php
 
-			<div class="input-group mx-1 my-2">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
-			  </div>
-			  <input type="text" class="form-control" placeholder="Heslo">
-			</div>
+	    if (!isset($_SESSION["id"]))
+	    {
+	
+	?>
+		    <form class="form-inline" action="<?= $file_prefix ?>login.php" method="post">
+					<div class="input-group mx-1 my-2">
+					  <div class="input-group-prepend">
+					    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+					  </div>
+					  <input name="login-name" type="text" class="form-control" placeholder="Jméno">
+					</div>
 
-			<button class="btn btn-outline-light mx-2" type="submit">Přihlásit</button>
-    </form>
+					<div class="input-group mx-1 my-2">
+					  <div class="input-group-prepend">
+					    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+					  </div>
+					  <input name="login-password" type="password" class="form-control" placeholder="Heslo">
+					</div>
+
+					<button class="btn btn-outline-light mx-2" type="submit">Přihlásit</button>
+		    </form>
+
+    <?php
+
+    	}else{
+
+    ?>
+		
+	    <form class="form-inline" action="<?= $file_prefix ?>logout.php" method="post">			
+			<h3>
+				<span class="badge badge-light"><?=$_SESSION["jmeno"]?></span>
+			</h3>
+
+			<button class="btn btn-outline-light mx-2" type="submit">Odhlásit</button>
+		</form>
+
+
+
+
+
+    <?php
+
+    	}
+
+    ?>
 
   </div>
 
