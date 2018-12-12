@@ -47,6 +47,7 @@
 			        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse_<?= $radek["id"] ?>" aria-expanded="true" aria-controls="collapseOne">
 			          <?= $radek["question"] ?>
 			        </button>
+			        <a class="float-right" href="../delete.php?id=<?= $radek["id"] ?>"><i class="fas fa-times fa-2x"></i></a>
 			      </h5>
 			    </div>
 
