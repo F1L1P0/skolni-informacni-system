@@ -8,28 +8,14 @@
 ?> 
 		<div class="jumbotron">
 			<span>FAQ</span>
-			<button id="add" type="button" class="btn btn-light btn-lg mx-1 my-auto d-inline-block" ><i class="fas fa-plus" ></i></button>
-			<script type="text/javascript">
-
-			 $("#add").click(function()
-			 	{
-				 	$.ajax(
-				 		{
-					 		url: "../ajax.php",
-					 		type: "POST",
-					 		data: {que: "neco?", ans: "ans"},
-					 		success: function(result){
-
-
-					 		}
-					 	}
-					)
-				}
-			)
-
-			</script>
+			<button id="add" type="button" class="btn btn-light btn-lg mx-1 my-auto d-inline-block" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus" ></i></button>
 
 		</div>
+
+		<?php
+			require "popup.php";
+		?>
+
 
 		<div id="accordion">
 <?php
