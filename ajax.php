@@ -8,9 +8,15 @@ function kontrola($val, $len, $nazev)
 			return;
 		}
 	}
+
+	$result = array();
+	$result["error"] = true;
+	$result["html"] = '<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a> '. $nazev . ' můsí být delší jak '. $len .' </div>';
 	
-	echo '<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a> '. $nazev . ' můsí být delší jak '. $len .' </div>';
-	 die();
+
+	echo json_encode($result);
+
+	die();
 }
 
 kontrola($_POST['que'], 4, "Otázka");
@@ -28,12 +34,9 @@ $databaze->query("INSERT INTO faq (question,answer ) VALUES ('$question', '$answ
 
 
 
-
-
-
-
-
-
+$result = array();
+$result["error"] = false;
+$result["html"] = "";
 
 /// Vypis z databaze
 $radky = $databaze->query("SELECT * FROM faq");
@@ -41,27 +44,29 @@ $radky = $databaze->query("SELECT * FROM faq");
 $radky = mysqli_fetch_all($radky, MYSQLI_ASSOC);
 
 foreach ($radky as $radek)
-{ ?>
+{ 
 
-		  <div class="card">
+		$result["html"] .= ' <div class="card">
 		    
 		    <div class="card-header" id="headingOne">
 		      <h5 class="mb-0">
-		        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse_<?= $radek["id"] ?>" aria-expanded="true" aria-controls="collapseOne">
-		          <?= $radek["question"] ?>
+		        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse_'. $radek["id"] .'" aria-expanded="true" aria-controls="collapseOne">
+		          '. $radek["question"] .'
 		        </button>
-		        <a class="float-right" href="../delete.php?id=<?= $radek["id"] ?>"><i class="fas fa-times fa-2x"></i></a>
+		        <a class="float-right" href="../delete.php?id='. $radek["id"] .'"><i class="fas fa-times fa-2x"></i></a>
 		      </h5>
 		    </div>
 
-		    <div id="collapse_<?= $radek["id"] ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+		    <div id="collapse_'. $radek["id"] .'" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 		      <div class="card-body">
-		        <?= $radek["answer"] ?>
+		        '. $radek["answer"] .'
 		      </div>
 		    </div>
-			  </div>
-<?php	
+			  </div>';
+	
 	}
+
+	echo json_encode($result); //vezme php array a předělá jej na javascriptový objekt
 
 	$databaze->close();				
 ?>

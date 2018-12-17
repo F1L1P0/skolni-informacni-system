@@ -21,7 +21,7 @@
 <?php
 	$radky = $databaze->query("SELECT * FROM faq");
 	
-	$radky = mysqli_fetch_all($radky, MYSQLI_ASSOC);
+	$radky = mysqli_fetch_all($radky, MYSQLI_ASSOC); // načte všechny řádky z databáze do arraye
 
 	foreach ($radky as $radek)
 	{ ?>

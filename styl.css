@@ -39,3 +39,7 @@ tbody{
 table{
 	background-image: linear-gradient(to right, #f64f594d, #15c1e933);
 }
+
+.card{
+	margin: 5px;
+}

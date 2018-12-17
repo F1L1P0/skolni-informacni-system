@@ -13,15 +13,23 @@
 			 	{
 				 	$.ajax(
 				 		{
-					 		url:
-					 		 "../ajax.php",
+					 		url: "../ajax.php",
 					 		type: "POST",
+					 		dataType: "json",
 					 		data: {
 					 			que: $("#que").val(),
 					 			ans: $("#ans").val()
 					 		},
 					 		success: function(result){
-					 			$("#accordion").html(result);
+					 			
+					 			if(result.error){
+					 				$("#error_space").html(result.html);
+					 			}
+					 			else{
+					 				$("#accordion").html(result.html);
+					 				$("#exampleModal").modal('hide');
+					 			}
+
 					 		}
 					 	}
 					)

@@ -8,6 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
+        <div id="error_space"></div>
           <div class="input-group mx-1 my-2">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"><i class="far fa-question-circle"></i>   </span>
@@ -21,7 +22,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Zavřít</button>
-        <button  id="save" type="button" class="btn btn-primary" data-dismiss="modal">Uložit příspěvek</button>
+        <button  id="save" type="button" class="btn btn-primary">Uložit příspěvek</button>
       </div>
     </div>
   </div>
