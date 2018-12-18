@@ -5,10 +5,10 @@
 	require "../header.php";
 
 
-?> 
-	<h1 class="nadpis">Not found</h1>
-	<a type="button" class="btn btn-warning btn-lg" href="../index.php">Fuck go Back</a>
-
+?> <div style="text-align: center;">
+	<h1  class="nadpis">Špatné údaje</h1>
+	<a style="" type="button" class="btn btn-warning btn-lg" href="../index.php">Vrátit se</a>
+	</div>
 	
 	
 			

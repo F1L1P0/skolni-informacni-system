@@ -20,7 +20,7 @@ function kontrola($val, $len, $nazev)
 }
 
 kontrola($_POST['que'], 4, "Otázka");
-kontrola($_POST['ans'], 10, "Odpověď");
+kontrola($_POST['ans'], 6, "Odpověď");
 
 
 $question = $_POST["que"];

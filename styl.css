@@ -1,7 +1,6 @@
 body, html{
 	background: #12c2e9;
-	background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
-	background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+	background: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?cs=srgb&dl=abstract-background-blur-255379.jpg&fm=jpg');
 	background-size: cover;
 	height: 100%;
 }
@@ -11,7 +10,7 @@ tbody{
 }	
 
 .navbar {
-	background-color: #4267b2e6;
+	background-color: #4267b2;
 }
 
 .container{
@@ -34,10 +33,6 @@ tbody{
 
 .pozice_kontakty{
 	text-align: left;
-}
-
-table{
-	background-image: linear-gradient(to right, #f64f594d, #15c1e933);
 }
 
 .card{

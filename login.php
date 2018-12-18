@@ -13,7 +13,7 @@ foreach ($result as $user){
 	if ($password == $user['password']) {
 		$_SESSION["id"] = $user['id'];
 		$_SESSION["jmeno"] = $user['name'];
-		redirect("Pages/Kontakty.php");
+		redirect("index.php");
 		die();
 
 
