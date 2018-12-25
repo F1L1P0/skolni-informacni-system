@@ -1,0 +1,100 @@
+BNC 73 39-Škoda-černá-75-5,2-2003
+AYV 85 46-Peugeot-žlutá-57-6-2012
+EOD 42 37-Ford-stříbrná-65-6,5-1999
+CHK 54 93-Fiat-fialová-49-5-2008
+SOL 89 27-Peugeot-modrá-112-8-2015
+CNB 93 73-Land Rover-hnědá-57-9-1995
+VYA 64 58-Toyota-zelená-80-6,8-2007
+DOE 73 24-Škoda-oranžová-94-8,3-2005
+KHC 39 45-Fiat-růžová-90-7,6-1997
+LOS 72 98-Mercedes-bílá-40-4,9-2016
+NBC 37 39-Peugeot-šedá-86-7-2001
+NCB 33 79-Opel-černá-48-5,6-2004
+YVA 54 86-Ford-stříbrná-51-8,6-2013
+ODE 23 47-Toyota-světle zelená-68-3,8-2000
+HKC 49 53-Fiat-tmavě modrá-95-6,7-2009
+OLS 92 87-Land Rover-bílá-57-5,3-2016
+YAV 45 68-Peugeot-červená-75-6,5-1996
+OED 32 74-Porsche-světle hnědá-56-4,5-2008
+HCK 94 35-Mercedes-žlutá-94-7-2006
+OSL 29 87-Škoda-okrová-93-6,4-1998
+RUV 65 34-Mazda-tmavě fialová-58-8,5-2017
+SEF 98 47-Toyota-stříbrná-77-7,6-2002
+GJL 21 26-Fiat-modrá-110-9-2005
+KXM 34 95-Opel-černá-117-9,5-2014
+ABC 57 89-Land Rover-modrá-76-8-2001
+DEF 25 24-Peugeot-fialová-58-8,7-2010
+GHC 07 85-Mercedes-stříbrná-112-9-2017
+IJK 69 37-Škoda-žlutá-57-10-1997
+LMN 67 52-Porsche-oranžová-80-11,2-2009
+OPQ 75 24-Kia-bílá-94-5-2007
+RST 98 63-Toyota-růžová-90-7,6-1999
+UVW 64 25-Fiat-černá-40-10,2-2018
+XYZ 37 48-Renault-černá-88-9-2003
+CBA 85 96-Land Rover-červená-92-9,2-2006
+FED 67 24-Honda-zelená-57-4,3-2015
+CHH G8 75-Peugeot-černá-40-6,8-2002
+KJI 45 58-Škoda-žlutá-86-8,3-2011
+NML 89 23-Mercedes-stříbrná-80-7,6-2018
+QPO 47 25-Toyota-fialová-51-4,9-1998
+TSR 12 34-Peugeot-modrá-68-7-2010
+WVU 78 32-Opel-hnědá-93-5,6-2008
+ZYX 42 36-Hyundai-zelená-58-8,6-2000
+CAB 20 86-Fiat-oranžová-77-8-2004
+FDE 27 44-Mazda-růžová-110-6,7-2007
+KIJ 59 57-Toyota-tmavě modrá-117-6,4-2016
+QOP 27 36-Škoda-bílá-76-8,5-2003
+TRS 98 24-Land Rover-červená-58-7,6-2012
+WUV 37 65-Peugeot-světle hnědá-112-9-1999
+ZXY 33 57-Mercedes-žlutá-132-9,5-2011
+AAB 66 71-Toyota-okrová-65-8-2009
+ELO 98 65-BMW-žlutá-78-7,9-2001
+IKL 63 22-Opel-oranžová-66-5,4-2005
+REZ 12 11-Mazda-bílá-90-8,5-2008
+WOD 56 97-Peugeot-růžová-115-10,9-2017
+KOL 88 54-Porsche-tmavě fialová-74-5,4-2004
+SAZ 36 45-Ford-stříbrná-85-9,7-2013
+BEN 47 39-Mercedes-modrá-73-6,5-2000
+JOK 75 64-Fiat-černá-96-7,3-2012
+SUP 48 53-Škoda-modrá-88-8,5-2010
+OLE 85 96-Fiat-zelená-80-11,2-2001
+LKI 75 63-Toyota-oranžová-51-5-2005
+ZER 23 65-Land Rover-růžová-68-7,6-2008
+DOW 12 53-Ford-bílá-95-10,2-2017
+LOK 41 20-Mercedes-šedá-57-9-2004
+ZAS 60 99-BMW-černá-75-9,2-2013
+NEB 55 60-Peugeot-zelená-112-9,2-2001
+KOJ 66 97-Kia-černá-57-4,3-2005
+PUS 34 57-Renault-žlutá-80-6,8-2008
+KIL 29 56-Ford-stříbrná-94-8,3-2017
+ERZ 10 67-Toyota-fialová-90-7,6-1997
+OWD 74 62-Mercedes-bílá-40-4,9-2014
+OKL 85 63-Fiat-modrá-93-10,2-2018
+ASZ 24 96-Škoda-hnědá-58-9-2005
+EBN 30 54-Opel-zelená-77-9,2-2014
+OJK 12 05-Land Rover-oranžová-110-9,7-2001
+USP 88 34-Peugeot-růžová-117-12,3-2013
+RZE 96 37-Toyota-tmavě modrá-76-8,3-2011
+WDO 40 63-Mercedes-bílá-58-7,6-2002
+KLO 74 28-Ford-červená-112-11,3-2006
+SZA 87 46-Kia-stříbrná-49-5,4-2016
+BNE 66 58-Honda-modrá-96-8,7-1993
+JKO 52 34-Fiat-černá-57-6,7-2015
+SPU 85 62-Land Rover-modrá-80-7,7-2002
+OSP 43 27-BMW-fialová-94-8,5-2007
+COP 37 83-Peugeot-stříbrná-90-8,2-2006
+HOS 88 67-Porsche-zelená-73-5,6-2010
+XOT 34 86-Renault-oranžová-96-8,6-2001
+QAS 37 68-Škoda-růžová-88-8-1998
+JFG 57 50-Toyota-tmavě modrá-80-6,7-2015
+DGT 37 60-Peugeot-bílá-51-6,4-2018
+ADH 36 27-Renault-červená-68-8,5-2006
+ORT 29 84-Opel-světle hnědá-80-8-2015
+ZON 96 97-Fiat-žlutá-94-7,9-2017
+POT 32 20-Mercedes-stříbrná-90-5,4-1994
+HZS 12 06-Ford-fialová-117-9,8-2003
+ALP 34 91-Renault-modrá-76-8,1-2007
+KAS 92 07-Toyota-modrá-58-6,4-2017
+FIP 47 30-Škoda-hnědá-65-7,1-1995
+ALF 10 49-Land Rover-zelená-49-5-2016
+PUK 46 91-Peugeot-oranžová-110-11,7-2009
