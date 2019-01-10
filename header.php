@@ -98,18 +98,21 @@
     	}else{
 
     ?>
-		
 	    <form class="form-inline" action="<?= $file_prefix ?>logout.php" method="post">			
 			<h3>
 				<span class="badge badge-light"><?=$_SESSION["jmeno"]?></span>
 			</h3>
-
+		
 			<button class="btn btn-outline-light mx-2" type="submit">Odhlásit</button>
+
+
 		</form>
 
+		<form>
 
+			<input class="btn btn-outline-light" type="button"  onclick="window.location.href = '<?= $file_prefix ?>Pages/settings.php';" value="Nastavení"/>
 
-
+		</form>
 
     <?php
 
