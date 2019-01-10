@@ -1,6 +1,5 @@
 body, html{
-	background: #12c2e9;
-	background: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?cs=srgb&dl=abstract-background-blur-255379.jpg&fm=jpg');
+	background: url('https://images.pexels.com/photos/988872/pexels-photo-988872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
 	background-size: cover;
 	height: 100%;
 }
@@ -10,7 +9,7 @@ tbody{
 }	
 
 .navbar {
-	background-color: #4267b2;
+	background-color: #8787d3;
 }
 
 .container{
