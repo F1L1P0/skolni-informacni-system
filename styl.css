@@ -9,7 +9,7 @@ tbody{
 }	
 
 .navbar {
-	background-color: #8787d3;
+	background-color: #4b65ad;
 }
 
 .container{
@@ -36,4 +36,8 @@ tbody{
 
 .card{
 	margin: 5px;
+}
+
+.setting{
+	text-align: center;
 }

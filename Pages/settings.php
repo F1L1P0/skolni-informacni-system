@@ -3,7 +3,7 @@
 	$file_prefix = "../";
 	require "../header.php";
 ?>	
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <title>Password Change</title>
      </head>
     <body>
@@ -29,6 +29,20 @@
     </table>
     <p><input type="submit" value="Uložit nové heslo.">
     </form>
+ -->
+
+
+<form>
+  <ul style="margin: 50px" class="list-group">
+    <li class="list-group-item active"><h1 style="text-align: center;">Změna hesla.</h1></li>
+    <li class="list-group-item">Zadej své aktuální heslo: <input style="margin: 6px" type="password" name="name"></li>
+    <li class="list-group-item">Zadej své nové heslo: <input style="margin: 6px" type="password" name="name"></li>
+    <li class="list-group-item">Potvrdit nové heslo: <input style="margin: 6px" type="password" name="name"></li>
+    <li class="list-group-item"><button type="button" class="btn btn-primary">Primary</button></li>
+
+  </ul>
+</form>
+
    </body>
    
 <?php
