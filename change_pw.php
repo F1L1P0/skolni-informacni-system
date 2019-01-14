@@ -15,6 +15,7 @@ if ($newpassword != $password ) {
     redirect("Pages/settings.php?error");
 }
 
+
 if(!$result || $result->num_rows == 0)
 {
     redirect("Pages/settings.php?error");
