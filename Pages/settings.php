@@ -20,7 +20,7 @@
     }
 
     if (isset($_GET['error'])) {
-      echo '<div class="alert alert-danger" role="alert">Špatné heslo.</div>';
+      echo '<div class="alert alert-danger" role="alert">Špatné nebo neshodné heslo.</div>';
     }
 
  ?>

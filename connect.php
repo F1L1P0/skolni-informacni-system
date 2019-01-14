@@ -12,6 +12,7 @@
 	function redirect($kam)
 	{
 		header("Location: " . $kam);
+		die();
 	}
 
 	function redirectIfNotLoggenIn()
