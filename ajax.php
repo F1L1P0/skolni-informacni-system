@@ -1,5 +1,6 @@
 <?php
 require "connect.php";
+redirectIfNotLoggenIn();
 
 function kontrola($val, $len, $nazev)
 {

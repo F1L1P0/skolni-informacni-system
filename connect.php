@@ -13,3 +13,12 @@
 	{
 		header("Location: " . $kam);
 	}
+
+	function redirectIfNotLoggenIn()
+	{
+		global $file_prefix;
+		if (!isset($_SESSION["id"]))
+	    {
+			redirect($file_prefix . "index.php");
+		}
+	}
