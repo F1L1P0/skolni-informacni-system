@@ -110,7 +110,7 @@
 
 		<form>
 
-			<input class="btn btn-outline-light" type="button"  onclick="window.location.href = '<?= $file_prefix ?>Pages/settings.php';" value="Nastavení"/>
+			<input class="btn btn-outline-light" type="button"  onclick="window.location.href = '<?= $file_prefix ?>Pages/settings.php';" value="Můj profil"/>
 
 		</form>
 

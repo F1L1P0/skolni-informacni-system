@@ -6,11 +6,11 @@
 ?>	
 
 <form action="../change_pw.php" method="POST">
-  <ul style="margin: 50px" class="list-group">
+  <ul class="list-group profil">
     <li class="list-group-item active"><h1 style="text-align: center;">Změna hesla.</h1></li>
-    <li class="list-group-item">Zadej své aktuální heslo: <input style="margin: 6px" type="password" name="old_pw"></li>
-    <li class="list-group-item">Zadej své nové heslo: <input style="margin: 6px" type="password" name="new_pw"></li>
-    <li class="list-group-item">Potvrdit nové heslo: <input style="margin: 6px" type="password" name="new_pw_check"></li>
+    <li class="list-group-item">Zadej své aktuální heslo: <input type="password" name="old_pw"></li>
+    <li class="list-group-item">Zadej své nové heslo: <input type="password" name="new_pw"></li>
+    <li class="list-group-item">Potvrdit nové heslo: <input type="password" name="new_pw_check"></li>
     <li class="list-group-item"><button type="submit" class="btn btn-primary">Uložit</button></li>
 
 <?php 
