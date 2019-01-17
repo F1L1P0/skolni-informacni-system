@@ -92,23 +92,25 @@ $databaze->query('SELECT * FROM users WHERE id=')
                           
                       </div>
                       <div class="form-group">
-                          
+
+<form action="../change_pw.php" method="POST">  
+                        
                           <div class="col-xs-6">
+
                               <label><h4>Původní heslo:</h4></label>
-                              <input type="password" class="form-control" name="old_pw" placeholder="Zadej své aktuální heslo." title="Zadej své aktuální heslo.">
+                              <input type="password" class="form-control" name="old_pw" placeholder="Zadej své aktuální heslo.">
                           </div>
                       </div>
                       <div class="form-group">
                           <div class="col-xs-6">
                             <label for="password2"><h4>Zadej nové heslo:</h4></label>
-                              <input type="password" class="form-control" name="new_pw" placeholder="Zadej nové heslo." title="Zadej nové heslo.">
+                              <input type="password" class="form-control" name="new_pw" placeholder="Zadej nové heslo.">
                           </div>
                       </div>
                       <div class="form-group">
-                          <form action="../change_pw.php" method="POST">
                           <div class="col-xs-6">
                             <label for="password2"><h4>Potvrdit nové heslo:</h4></label>
-                              <input type="password" class="form-control" name="new_pw_check" placeholder="Potvrdit nové heslo." title="Potvrdit nové heslo.">
+                              <input type="password" class="form-control" name="new_pw_check" placeholder="Potvrdit nové heslo.">
                           </div>
                       </div>
                       <div class="form-group">
@@ -129,7 +131,7 @@ $databaze->query('SELECT * FROM users WHERE id=')
 
  ?> 
 
-              	</form>
+</form>
 
 <?php
 	require '../footer.php';
