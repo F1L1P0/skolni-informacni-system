@@ -11,7 +11,7 @@ $confirmnewpassword = $_POST['new_pw_check'];
 
 $result = $databaze->query("SELECT password FROM users WHERE name='$username' AND password='$password'");
 
-if ($newpassword != $password ) {
+if ($newpassword == $password ) {
     redirect("Pages/profil.php?error");
 }
 

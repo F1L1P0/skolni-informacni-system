@@ -46,3 +46,13 @@ tbody{
 	margin: 30px;
 	background-color: white;
 }
+ 
+
+.pw_tittle{
+	border-style: groove;
+	border-top-color: #cccbd0;
+}
+
+.odstup{
+	padding: 5px;
+}

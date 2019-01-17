@@ -1,5 +1,5 @@
 <?php
-	$header_title = "FAQ";
+	$header_title = "Můj profil";
 	$file_prefix = "../";
 	require "../header.php";
   	redirectIfNotLoggenIn();
@@ -7,21 +7,21 @@
 
 
 
-if(isset($_GET["i"]))
-{
-	if ($_GET["i"] == $_SESSION['id']) {
-		// můj profil
-	}else{
-		// cizí profil
-	}
-}else{
-	//redirect("../");
-}
+// if(isset($_GET["i"]))
+// {
+// 	if ($_GET["i"] == $_SESSION['id']) {
+// 		// můj profil
+// 	}else{
+// 		// cizí profil
+// 	}
+// }else{
+// 	//redirect("../");
+// }
 
 
 
 
-$databaze->query('SELECT * FROM users WHERE id=')
+// $databaze->query('SELECT * FROM users WHERE id=')
 
 //$tel=
 //$email=
@@ -39,7 +39,7 @@ $databaze->query('SELECT * FROM users WHERE id=')
         <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
         <h6>Upload a different photo...</h6>
         <input type="file" class="text-center center-block file-upload">
-      </div></hr><br>
+      </div><br>
 
                
           <div class="panel panel-default">
@@ -56,7 +56,6 @@ $databaze->query('SELECT * FROM users WHERE id=')
               
           <div class="tab-content">
             <div class="tab-pane active" id="home">
-                <hr>
  	                      <div class="form-group">
                           
                           <div class="col-xs-6">
@@ -92,10 +91,10 @@ $databaze->query('SELECT * FROM users WHERE id=')
                           
                       </div>
                       <div class="form-group">
-
+<h1 class="pw_tittle">Změna hesla.</h1>
 <form action="../change_pw.php" method="POST">  
-                        
-                          <div class="col-xs-6">
+
+                          <div class="col-xs-6 odstup">
 
                               <label><h4>Původní heslo:</h4></label>
                               <input type="password" class="form-control" name="old_pw" placeholder="Zadej své aktuální heslo.">
@@ -103,13 +102,13 @@ $databaze->query('SELECT * FROM users WHERE id=')
                       </div>
                       <div class="form-group">
                           <div class="col-xs-6">
-                            <label for="password2"><h4>Zadej nové heslo:</h4></label>
+                            <label><h4>Zadej nové heslo:</h4></label>
                               <input type="password" class="form-control" name="new_pw" placeholder="Zadej nové heslo.">
                           </div>
                       </div>
                       <div class="form-group">
                           <div class="col-xs-6">
-                            <label for="password2"><h4>Potvrdit nové heslo:</h4></label>
+                            <label><h4>Potvrdit nové heslo:</h4></label>
                               <input type="password" class="form-control" name="new_pw_check" placeholder="Potvrdit nové heslo.">
                           </div>
                       </div>
@@ -119,7 +118,7 @@ $databaze->query('SELECT * FROM users WHERE id=')
                               	<button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>Uložit</button>
                             </div>
                       </div>
-                      <?php 
+<?php 
     
     if (isset($_GET['success'])) {
       echo '<div class="alert alert-success" role="alert">Heslo úspěšně změněno.</div>';
@@ -129,10 +128,10 @@ $databaze->query('SELECT * FROM users WHERE id=')
       echo '<div class="alert alert-danger" role="alert">Špatné nebo neshodné heslo.</div>';
     }
 
- ?> 
+?> 
 
 </form>
-
+</body>
 <?php
 	require '../footer.php';
 ?> 
