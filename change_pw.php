@@ -12,18 +12,18 @@ $confirmnewpassword = $_POST['new_pw_check'];
 $result = $databaze->query("SELECT password FROM users WHERE name='$username' AND password='$password'");
 
 if ($newpassword != $password ) {
-    redirect("Pages/settings.php?error");
+    redirect("Pages/profil.php?error");
 }
 
 
 if(!$result || $result->num_rows == 0)
 {
-    redirect("Pages/settings.php?error");
+    redirect("Pages/profil.php?error");
 }else
 {
     $sql = $databaze->query("UPDATE users SET password='$newpassword' WHERE id='$userid'");
     if($sql)
     {
-        redirect("Pages/settings.php?success");
+        redirect("Pages/profil.php?success");
     }
 }
