@@ -1,11 +1,12 @@
 <?php
 	$header_title = "Můj profil";
 	$file_prefix = "../";
-	require "../header.php";
-  	redirectIfNotLoggenIn();
+	require "../header.php"; 
+  redirectIfNotLoggenIn();
 
 
-
+$name = $_SESSION["jmeno"];
+$user = $databaze->query('SELECT * FROM users WHERE id=' . $_SESSION['id'])->fetch_assoc();
 
 // if(isset($_GET["i"]))
 // {
@@ -49,7 +50,7 @@
             </div>
           </div>
           
-        </div><!--/col-3-->
+        </div>
     	<div class="col-sm-9">
             
 
@@ -60,22 +61,15 @@
                           
                           <div class="col-xs-6">
                               <label for="first_name"><h4>Jméno</h4></label>
-                              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                              <input type="text" class="form-control" name="name" id="first_name" placeholder="first name" title="enter your first name if any." value="<?= $user['name'] ?>">
                           </div>
                       </div>
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                            <label for="last_name"><h4>Příjmení</h4></label>
-                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
-                          </div>
-                      </div>
-          
+              
                       <div class="form-group">
                           
                           <div class="col-xs-6">
                               <label for="phone"><h4>Telefoní číslo</h4></label>
-                              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                              <input type="text" class="form-control" name="phone" id="phone"  title="enter your phone number if any." value="<?= $user['tel'] ?>"> 
                           </div>
                       </div>
           
@@ -84,7 +78,7 @@
                           
                           <div class="col-xs-6">
                               <label for="email"><h4>Email</h4></label>
-                              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                              <input type="email" class="form-control" name="email" id="email" title="enter your email." value="<?= $user['email'] ?>">
                           </div>
                       </div>
                       <div class="form-group">

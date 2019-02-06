@@ -49,9 +49,15 @@ tbody{
  
 
 .pw_tittle{
-	border-style: groove;
-	border-top-color: #cccbd0;
+	background-color: #666;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px; 
+	width: 280px;
 }
+
 
 .odstup{
 	padding: 5px;

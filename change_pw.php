@@ -11,7 +11,7 @@ $confirmnewpassword = $_POST['new_pw_check'];
 
 $result = $databaze->query("SELECT password FROM users WHERE name='$username' AND password='$password'");
 
-if ($newpassword == $password ) {
+if ($newpassword == $password) {
     redirect("Pages/profil.php?error");
 }
 
@@ -19,11 +19,15 @@ if ($newpassword == $password ) {
 if(!$result || $result->num_rows == 0)
 {
     redirect("Pages/profil.php?error");
-}else
+}
+
+if($newpassword == $confirmnewpassword)
 {
     $sql = $databaze->query("UPDATE users SET password='$newpassword' WHERE id='$userid'");
     if($sql)
     {
         redirect("Pages/profil.php?success");
     }
+}else{
+    redirect("Pages/profil.php?error");
 }
