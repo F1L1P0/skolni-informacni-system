@@ -6,13 +6,13 @@
 
 ?> 
 
-		<div class="jumbotron">
+		<div class="center-header">
 			<span>FAQ</span>
 	<?php
 			if (isset($_SESSION["id"]))
 	    	{
 	   ?>
-			<button id="add" type="button" class="btn btn-light btn-lg mx-1 my-auto d-inline-block" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus" ></i></button>
+			<button id="add" type="button" class="btn btn-light btn-lg mx-1 my-auto d-inline-block ml-2" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus" ></i></button>
 <?php
 			}
 	   ?>

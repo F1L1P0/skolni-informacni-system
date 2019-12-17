@@ -8,28 +8,10 @@
 $name = $_SESSION["jmeno"];
 $user = $databaze->query('SELECT * FROM users WHERE id=' . $_SESSION['id'])->fetch_assoc();
 
-// if(isset($_GET["i"]))
-// {
-// 	if ($_GET["i"] == $_SESSION['id']) {
-// 		// můj profil
-// 	}else{
-// 		// cizí profil
-// 	}
-// }else{
-// 	//redirect("../");
-// }
-
-
-
-
-// $databaze->query('SELECT * FROM users WHERE id=')
-
-//$tel=
-//$email=
-//$role=
-
-
 ?>
+<div class="uvod">
+  <p>Nastavení a správa hesla</p>
+</div>
 <div class="profil">
 <div class="container bootstrap snippet">
     <div class="row">
@@ -51,10 +33,10 @@ $user = $databaze->query('SELECT * FROM users WHERE id=' . $_SESSION['id'])->fet
           </div>
           
         </div>
+
+
     	<div class="col-sm-9">
             
-
-              
           <div class="tab-content">
             <div class="tab-pane active" id="home">
  	                      <div class="form-group">

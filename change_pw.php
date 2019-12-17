@@ -15,7 +15,6 @@ if ($newpassword == $password) {
     redirect("Pages/profil.php?error");
 }
 
-
 if(!$result || $result->num_rows == 0)
 {
     redirect("Pages/profil.php?error");

@@ -10,30 +10,22 @@ function kontrola($val, $len, $nazev)
 		}
 	}
 
-	$result = array();
-	$result["error"] = true;
-	$result["html"] = '<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a> '. $nazev . ' můsí být delší jak '. $len .' </div>';
-	
+$result = array();
+$result["error"] = true;
+$result["html"] = '<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a> '. $nazev . ' můsí být delší jak '. $len .' </div>';
 
-	echo json_encode($result);
+echo json_encode($result);
 
-	die();
+die();
 }
 
 kontrola($_POST['que'], 4, "Otázka");
 kontrola($_POST['ans'], 6, "Odpověď");
 
-
 $question = $_POST["que"];
 $answer = $_POST["ans"];
-	
 
 $databaze->query("INSERT INTO faq (question,answer ) VALUES ('$question', '$answer')"); // vykoná SQL kód
-
-
-
-
-
 
 $result = array();
 $result["error"] = false;
