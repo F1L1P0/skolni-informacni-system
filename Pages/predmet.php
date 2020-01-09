@@ -3,7 +3,7 @@
 	$file_prefix = "../";
 	require "../header.php";
    
-  if (!empty($_POST)){
+    if (!empty($_POST)){
     $den = $_POST["den"];
     $hodina = $_POST["hodina"];
     $predmet = $_POST["predmet"];
@@ -25,7 +25,7 @@
 
   foreach ($predmety as $predmet)
   {
-    $tyden[intval($predmet['den'])][intval($predmet['hodina'])] = "<td onclick='add_button(".$predmet['den'].",".$predmet['hodina'].")' class='predmet cursor' ><div class='predmet_border' style='background-color:".$predmet["barva"].";'>".$predmet['nazev']."<br>"."<span class='d-none d-lg-inline'>".$predmet['ucitel']."</span></div></td>";
+    $tyden[intval($predmet['den'])][intval($predmet['hodina'])] = "<td onclick='add_button(".$predmet['den'].",".$predmet['hodina'].")' class='predmet cursor' ><div class='predmet_border' style='background-color:".$predmet["barva"]."; transition: 0.4s ease-in-out;'>".$predmet['nazev']."<br>"."<span class='d-none d-lg-inline'>".$predmet['ucitel']."</span></div></td>";
   }
   
 ?>

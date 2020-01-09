@@ -9,91 +9,70 @@ $name = $_SESSION["jmeno"];
 $user = $databaze->query('SELECT * FROM users WHERE id=' . $_SESSION['id'])->fetch_assoc();
 
 ?>
+  
 <div class="uvod">
   <p>Nastavení a správa hesla</p>
 </div>
-<div class="profil">
-<div class="container bootstrap snippet">
-    <div class="row">
-  		<div class="col-sm-3"><!--left col-->
-              
+<div class="profil d-flex justify-content-center">
 
-      <div class="text-center">
-        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-        <h6>Upload a different photo...</h6>
-        <input type="file" class="text-center center-block file-upload">
-      </div><br>
-
-               
-          <div class="panel panel-default">
-            <div class="panel-heading">Další kontakty</div>
-            <div class="panel-body">
-            	<i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
+<div class="mt-3 col-sm-9">
+  
+<div class="tab-content">
+  <div class="tab-pane active" id="home">
+              <div class="form-group">
+                
+                <div class="col-xs-6">
+                    <label for="first_name"><h4>Jméno</h4></label>
+                    <input type="text" class="form-control" name="name" id="first_name" placeholder="first name" title="enter your first name if any." value="<?= $user['name'] ?>">
+                </div>
             </div>
-          </div>
-          
-        </div>
+    
+            <div class="form-group">
+                
+                <div class="col-xs-6">
+                    <label for="phone"><h4>Telefoní číslo</h4></label>
+                    <input type="text" class="form-control" name="phone" id="phone"  title="enter your phone number if any." value="<?= $user['tel'] ?>"> 
+                </div>
+            </div>
 
-
-    	<div class="col-sm-9">
             
-          <div class="tab-content">
-            <div class="tab-pane active" id="home">
- 	                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="first_name"><h4>Jméno</h4></label>
-                              <input type="text" class="form-control" name="name" id="first_name" placeholder="first name" title="enter your first name if any." value="<?= $user['name'] ?>">
-                          </div>
-                      </div>
-              
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="phone"><h4>Telefoní číslo</h4></label>
-                              <input type="text" class="form-control" name="phone" id="phone"  title="enter your phone number if any." value="<?= $user['tel'] ?>"> 
-                          </div>
-                      </div>
-          
-                      
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="email"><h4>Email</h4></label>
-                              <input type="email" class="form-control" name="email" id="email" title="enter your email." value="<?= $user['email'] ?>">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          
-                      </div>
-                      <div class="form-group">
+            <div class="form-group">
+                
+                <div class="col-xs-6">
+                    <label for="email"><h4>Email</h4></label>
+                    <input type="email" class="form-control" name="email" id="email" title="enter your email." value="<?= $user['email'] ?>">
+                </div>
+            </div>
+            <div class="form-group">
+                
+            </div>
+            <div class="form-group">
 <h1 class="pw_tittle">Změna hesla.</h1>
 <form action="../change_pw.php" method="POST">  
 
-                          <div class="col-xs-6 odstup">
+                <div class="col-xs-6 odstup">
 
-                              <label><h4>Původní heslo:</h4></label>
-                              <input type="password" class="form-control" name="old_pw" placeholder="Zadej své aktuální heslo.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <div class="col-xs-6">
-                            <label><h4>Zadej nové heslo:</h4></label>
-                              <input type="password" class="form-control" name="new_pw" placeholder="Zadej nové heslo.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <div class="col-xs-6">
-                            <label><h4>Potvrdit nové heslo:</h4></label>
-                              <input type="password" class="form-control" name="new_pw_check" placeholder="Potvrdit nové heslo.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                           <div class="col-xs-12">
-                                <br>
-                              	<button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>Uložit</button>
-                            </div>
-                      </div>
+                    <label><h4>Původní heslo:</h4></label>
+                    <input type="password" class="form-control" name="old_pw" placeholder="Zadej své aktuální heslo.">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-6">
+                  <label><h4>Zadej nové heslo:</h4></label>
+                    <input type="password" class="form-control" name="new_pw" placeholder="Zadej nové heslo.">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-6">
+                  <label><h4>Potvrdit nové heslo:</h4></label>
+                    <input type="password" class="form-control" name="new_pw_check" placeholder="Potvrdit nové heslo.">
+                </div>
+            </div>
+            <div class="form-group">
+                  <div class="col-xs-12">
+                      <br>
+                      <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>Uložit</button>
+                  </div>
 <?php 
     
     if (isset($_GET['success'])) {

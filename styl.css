@@ -27,11 +27,11 @@ tbody{
 }
 
 .profil{
-	margin: 30px;
 	background-color: white;
 }
 
 .pw_tittle{
+    font-size: 20px;
 	background-color: #666;
 	color: #fff;
 	font-weight: bold;
@@ -148,7 +148,6 @@ table tr td{
 .predmet{
     text-align: left;
     padding: 4px;
-    border: 1.5px solid grey;
     max-width: 60px;
     min-width: 60px;
 }
@@ -179,10 +178,10 @@ table tr td{
     border-style: solid;
     border-width: 1px;
     color: #eae9e9;
-    border-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     text-align: center;
     font-size: 20px;
-    position: relative;
 }
 
 #footer {
@@ -245,4 +244,10 @@ table tr td{
 .predmet_border{
     border-radius: 5px;
     padding: 8px;
+    border: 1px solid grey;
+}
+
+.predmet_border:hover{
+    background-color: rgb(102, 102, 102) !important;
+    transition: 0.4s ease-in-out;
 }
