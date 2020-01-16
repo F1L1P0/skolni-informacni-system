@@ -7,7 +7,7 @@ $password = "";
 $dbname = "prvni_databaze";
 
 $databaze = new mysqli($servername, $username, $password, $dbname);
-$databaze->query("SET NAMES utf8"); // vykoná SQL kód
+$databaze->query("SET NAMES utf8"); // nastaví jazyk 
 	
 function redirect($kam)
 {

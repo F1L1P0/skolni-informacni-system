@@ -18,9 +18,7 @@
  
   $result = $databaze->query("SELECT * FROM predmety");
   $select_predmety = $result->fetch_all(MYSQLI_ASSOC);
-  
 
-    
   $tyden = [1=>[],[],[],[],[]];
 
   foreach ($predmety as $predmet)

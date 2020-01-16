@@ -39,6 +39,9 @@ if (!isset($file_prefix)) {
 					<li class="nav-item">
 						<a class="nav-link navbar-hover" href="<?= $file_prefix ?>Pages/predmet.php">Rozvrhy</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link navbar-hover" href="<?= $file_prefix ?>Pages/asynch.php">asynch</a>
+					</li>
    			</ul>
 
 <?php

@@ -9,9 +9,9 @@ $name = $_SESSION["jmeno"];
 $user = $databaze->query('SELECT * FROM users WHERE id=' . $_SESSION['id'])->fetch_assoc();
 
 ?>
-  
+<div class="mt-3">
 <div class="uvod">
-  <p>Nastavení a správa hesla</p>
+  <p class="pt-2">Nastavení a správa hesla</p>
 </div>
 <div class="profil d-flex justify-content-center">
 
@@ -73,6 +73,7 @@ $user = $databaze->query('SELECT * FROM users WHERE id=' . $_SESSION['id'])->fet
                       <br>
                       <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>Uložit</button>
                   </div>
+                </div>
 <?php 
     
     if (isset($_GET['success'])) {

@@ -1,38 +1,17 @@
 <?php
-require "connect.php";
+require "../connect.php";
 redirectIfNotLoggenIn();
 
-function kontrola($val, $len, $nazev)
-{
-	if (isset($val)) {
-		if (strlen($val) > $len) {
-			return;
-		}
-	}
+$nadpis = $_POST["nadpis"];
+$komentar = $_POST["komentar"];
 
-$result = array();
-$result["error"] = true;
-$result["html"] = '<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a> '. $nazev . ' můsí být delší jak '. $len .' </div>';
-
-echo json_encode($result);
-
-die();
-}
-
-kontrola($_POST['que'], 3, "Otázka");
-kontrola($_POST['ans'], 2, "Odpověď");
-
-$question = $_POST["que"];
-$answer = $_POST["ans"];
-
-$databaze->query("INSERT INTO faq (question,answer ) VALUES ('$question', '$answer')"); // vykoná SQL kód
-
+$databaze->query("INSERT INTO asynch (komentar,nadpis ) VALUES ('$komentar', '$nadpis')"); // vykoná SQL kód
 $result = array();
 $result["error"] = false;
 $result["html"] = "";
 
 /// Vypis z databaze
-$radky = $databaze->query("SELECT * FROM faq");
+$radky = $databaze->query("SELECT * FROM asynch");
 
 $radky = mysqli_fetch_all($radky, MYSQLI_ASSOC);
 
@@ -44,7 +23,7 @@ foreach ($radky as $radek)
 		    <div class="card-header" id="headingOne">
 		      <h5 class="mb-0">
 		        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse_'. $radek["id"] .'" aria-expanded="true" aria-controls="collapseOne">
-		          '. $radek["question"] .'
+		          '. $radek["nadpis"] .'
 		        </button>
 		        <a class="float-right" href="../delete.php?id='. $radek["id"] .'"><i class="fas fa-times fa-2x"></i></a>
 		      </h5>
@@ -52,7 +31,7 @@ foreach ($radky as $radek)
 
 		    <div id="collapse_'. $radek["id"] .'" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 		      <div class="card-body">
-		        '. $radek["answer"] .'
+		        '. $radek["komentar"] .'
 		      </div>
 		    </div>
 			  </div>';

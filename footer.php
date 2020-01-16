@@ -38,6 +38,33 @@ $("#save").click(function()
 }
 )
 
+$("#savekomentar").click(function()
+{
+	$.ajax(
+		{
+			url: "./ajaxasynch.php",
+			type: "POST",
+			dataType: "json",
+			data: {
+				nadpis: $("#nad").val(),
+				komentar: $("#kom").val(),
+			},
+			success: function(result){
+				
+				if(result.error){
+					$("#error_space").html(result.html);
+				}
+				else{
+					$("#accordion").html(result.html);
+					$("#exampleModal").modal('hide');
+				}
+
+			}
+		}
+	)
+}
+)
+
 </script>
 
 </div>
