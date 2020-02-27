@@ -11,6 +11,8 @@
         <div class="modal-body">
             <input id="input_den" type="hidden" name="den">
             <input id="input_hodina" type="hidden" name="hodina">
+            <input type="hidden" name="trida" value="<?= $rozvrhId_get ?>"> 
+
             <select name="predmet">
               <option value="0">Volná hodina</option>
               <?php foreach ($select_predmety as $predmet) : ?>

@@ -251,3 +251,26 @@ table tr td{
     background-color: rgb(102, 102, 102) !important;
     transition: 0.4s ease-in-out;
 }
+
+.select {
+outline: 0;
+box-shadow: none;
+border: 0 !important;
+background:#15374e;
+background-image: none;
+}
+/* Remove IE arrow */
+.select::-ms-expand {
+display: none;
+}
+/* Custom Select */
+.select {
+background: #15374e;
+overflow: hidden;
+}
+.select {
+flex: 1;
+padding: 0 .5em;
+color: #fff;
+cursor: pointer;
+}
