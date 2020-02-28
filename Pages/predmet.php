@@ -28,9 +28,22 @@
 
   $tyden = [1=>[],[],[],[],[]];
 
+  if (isset($_SESSION["id"])) {
+    $userid = $_SESSION["id"];
+    $wanted = $databaze->query("SELECT id,role FROM users WHERE id='$userid'");
+    $role = $wanted->fetch_all(MYSQLI_ASSOC);
+    $canEdit = $role[0]["role"] == "admin";
+  }else {
+    $canEdit = false;
+  }
+
   foreach ($predmety as $predmet)
   {
-    $tyden[intval($predmet['den'])][intval($predmet['hodina'])] = "<td onclick='add_button(".$predmet['den'].",".$predmet['hodina'].")' class='predmet cursor' ><div class='predmet_border' style='background-color:".$predmet["barva"]."; transition: 0.4s ease-in-out;'>".$predmet['nazev']."<br>"."<span class='d-none d-lg-inline'>".$predmet['ucitel']."</span></div></td>";
+    if ($canEdit) {
+     $tyden[intval($predmet['den'])][intval($predmet['hodina'])] = "<td onclick='add_button(".$predmet['den'].",".$predmet['hodina'].")' class='predmet cursor' ><div class='predmet_border' style='background-color:".$predmet["barva"]."; transition: 0.4s ease-in-out;'>".$predmet['nazev']."<br>"."<span class='d-none d-lg-inline'>".$predmet['ucitel']."</span></div></td>";
+    }else{
+     $tyden[intval($predmet['den'])][intval($predmet['hodina'])] = "<td class='predmet cursor' ><div class='predmet_border' style='background-color:".$predmet["barva"]."; transition: 0.4s ease-in-out;'>".$predmet['nazev']."<br>"."<span class='d-none d-lg-inline'>".$predmet['ucitel']."</span></div></td>";
+    }
   }
   
   $tridy_vyber =  $databaze->query("SELECT trida,id FROM rozvrhy ORDER BY trida desc");
@@ -68,23 +81,23 @@
       5=>"Pátek"
     ];
 
-    for ($i=1; $i < 6; $i++) { 
-      echo "<tr class='grey'>";
-      echo "<td>".$dny[$i]."</td>";
 
-      for ($h=1; $h < 9; $h++) { 
-        if (isset($tyden[$i][$h])){
-          echo $tyden[$i][$h];
-        }else if (isset($_SESSION["id"])) {
-          echo '<td class="grey"><a class="add_button d-inline-block cursor" onclick="add_button('.$i.','.$h.')"><i class="fas fa-plus"></i></a></td>';
-        } else {
-          echo "<td class='grey'></td>";
+  for ($i=1; $i < 6; $i++) { 
+        echo "<tr class='grey'>";
+        echo "<td>".$dny[$i]."</td>";
+
+        for ($h=1; $h < 9; $h++) { 
+          if (isset($tyden[$i][$h])){
+            echo $tyden[$i][$h];
+          }else if ($canEdit) {
+              echo '<td class="grey"><a class="add_button d-inline-block cursor" onclick="add_button('.$i.','.$h.')"><i class="fas fa-plus"></i></a></td>';
+          } else {
+            echo "<td class='grey'></td>";
+          }
         }
+        echo "</tr>";
       }
-      echo "</tr>";
-    }
-
-    ?>
+      ?>
 
   </table>
   </div>

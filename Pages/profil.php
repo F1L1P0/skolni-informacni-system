@@ -19,37 +19,38 @@ $user = $databaze->query('SELECT * FROM users WHERE id=' . $_SESSION['id'])->fet
   
 <div class="tab-content">
   <div class="tab-pane active" id="home">
-              <div class="form-group">
-              <form action="../change_details.php" method="POST"> 
-                <div class="col-xs-6">
-                    <label for="first_name"><h4>Jméno</h4></label>
-                    <input type="text" disabled="disabled" class="form-control" name="name" id="first_name" placeholder="first name" title="enter your first name if any." value="<?= $user['name'] ?>">
-                </div>
-            </div>
-    
-            <div class="form-group">
-                
-                <div class="col-xs-6">
-                    <label for="phone"><h4>Telefoní číslo</h4></label>
-                    <input type="text" class="form-control" name="phone" id="phone"  title="enter your phone number if any." value="<?= $user['tel'] ?>"> 
-                </div>
-            </div>
+    <div class="form-group">
+<form action="../change_details.php" method="POST"> 
+        <div class="col-xs-6">
+            <label for="first_name"><h4>Jméno</h4></label>
+            <input type="text" disabled="disabled" class="form-control" name="name" id="first_name" placeholder="first name" title="enter your first name if any." value="<?= $user['name'] ?>">
+        </div>
+    </div>
 
-            
-            <div class="form-group">
-                
-                <div class="col-xs-6">
-                    <label for="email"><h4>Email</h4></label>
-                    <input type="email" class="form-control" name="email" id="email" title="enter your email." value="<?= $user['email'] ?>">
-                </div>
-            </div>
-            <div class="form-group">
-            <div class="col-xs-12">
-                      <br>
-                      <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>Uložit změnu údajů</button>
-                  </div>
-            </div>
-            </form>
+    <div class="form-group">
+        
+        <div class="col-xs-6">
+            <label for="phone"><h4>Telefoní číslo</h4></label>
+            <input type="text" class="form-control" name="phone" id="phone"  title="enter your phone number if any." value="<?= $user['tel'] ?>"> 
+        </div>
+    </div>
+
+    
+    <div class="form-group">
+        
+        <div class="col-xs-6">
+            <label for="email"><h4>Email</h4></label>
+            <input type="email" class="form-control" name="email" id="email" title="enter your email." value="<?= $user['email'] ?>">
+        </div>
+    </div>
+    <div class="form-group">
+    <div class="col-xs-12">
+      <br>
+        <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>Uložit změnu údajů</button>
+    </div>
+    </div>
+</form>
+
 <h1 class="pw_tittle">Změna hesla.</h1>
 <form action="../change_pw.php" method="POST">  
 
